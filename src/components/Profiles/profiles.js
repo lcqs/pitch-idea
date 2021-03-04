@@ -51,4 +51,4 @@ const mapStateToProps = state=>{
 const mapDispatchToProps = dispatch=>{
     return bindActionCreators({addUserByID}, dispatch)
 }
-export default connect(mapStateToProps, {mapDispatchToProps})(profiles)    
+export default connect(mapStateToProps, mapDispatchToProps)(profiles)    
