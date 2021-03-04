@@ -3,7 +3,7 @@ import {ADD_USER} from '../actions/actions'
 
 
 
-const users = (state = data, action) =>{
+const availableUsers = (state = data, action) =>{
     switch(action.type){
         case ADD_USER:
             const availableUsers = removeUserFromState(state, action.id);
@@ -15,4 +15,4 @@ const users = (state = data, action) =>{
 const removeUserFromState = (state, id) => state.filter(user => user.id !== id)
 
 
-export default users;
+export default availableUsers;

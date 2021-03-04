@@ -1,21 +1,37 @@
 import React from 'react';
 import './styles.css';
-import api from '../../API/api'
-const users = api;
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from 'react-router-dom';
+import {form as Form} from '../../components/Form/form';
+import {home as Home} from '../../components/Home/home';
+import  Profiles from '../../components/Profiles/profiles';
+import {about as About} from '../../components/About/about';
+import {categories as Categories} from '../../components/Categories/categories';
 
 const app = () =>{   
     return(
-        <div className="app">
-            <ul>
-                {users.map(user => {
-                    return(
-                        <li key={user.id}>
-                            {user.first_name}
-                        </li>
-                    )
-                 })}
-            </ul>
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/Pitch">
+                    <Form/>
+                </Route>
+                <Route path='/profiles'>
+                    <Profiles/>
+                </Route>    
+                <Route path='/categories'>
+                    <Categories/>
+                </Route>    
+                <Route path='/about'>
+                    <About/>
+                </Route>
+                <Route path='/'>
+                    <Home/>
+                </Route>
+            </Switch>
+        </Router>
     )
 };
 

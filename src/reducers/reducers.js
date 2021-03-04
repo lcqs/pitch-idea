@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import users from './users'
+import availableUsers from './availableUsers'
 import emailDestinationList from './emailDestinationList';
 
 
 const rootReducer = combineReducers({
-    users,
+    availableUsers,
     emailDestinationList
 })
 

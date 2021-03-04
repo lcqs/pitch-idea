@@ -10,7 +10,7 @@ import {createStore} from 'redux';
 
 const store = createStore(rootReducer);
 console.log("Store 1", store.getState());
-store.subscribe(() =>console.log('store.subscribe after change', store.getState()));
+store.subscribe(() =>console.log('store.subscribe is an event listener which triggers this fn every time state changes', store.getState()));
 store.dispatch(addUserByID(2));
 
 ReactDom.render( <Provider store={store}>
