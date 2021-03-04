@@ -11,6 +11,6 @@ const emailDestinationList = (state=[], action) =>{
     }
 }
 
-const addUserToEmailList = id => data.find(user => user.id = id)
+const addUserToEmailList = id => data.find(user => user.id === id)
 
 export default emailDestinationList;
